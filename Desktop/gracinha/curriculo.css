@@ -124,3 +124,55 @@ p {
     text-shadow: 1px 1px #FFFFFF, 2px 2px #808080; /* Sombra 3D discreta */
     z-index: 5;
 }
+
+/* ================================================= */
+/* MEDIA QUERY: AJUSTES PARA DISPOSITIVOS MÓVEIS */
+/* ================================================= */
+
+@media (max-width: 600px) {
+    /* Diminui a margem e o padding do corpo para aproveitar o espaço */
+    body {
+        padding: 10px;
+    }
+
+    /* Reduz a largura máxima e remove a margem lateral do MAIN */
+    main {
+        max-width: 100%;
+        margin: 20px auto;
+        /* Remove a sombra do Windows 98/MSN para evitar que ela seja cortada na lateral */
+        box-shadow: none; 
+        /* Simplifica a borda para não parecer cortada */
+        border-width: 1px;
+    }
+    
+    /* Ajusta o tamanho da fonte para leitura no celular */
+    header h1 {
+        font-size: 2.2em; 
+    }
+
+    header h2 {
+        font-size: 1em;
+    }
+
+    /* Reduz a margem interna das seções */
+    section {
+        margin: 10px 0;
+        padding: 15px;
+    }
+    
+    /* Reduz o tamanho do título da seção */
+    section h3 {
+        font-size: 1.4em;
+    }
+    
+    /* Garante que o texto de parágrafo se ajuste */
+    p {
+        text-align: left; /* No celular, o justify pode criar espaços estranhos, melhor deixar alinhado à esquerda */
+    }
+
+    /* Garante que o pop-up de música seja bem visível e menor */
+    #popup-musica {
+        width: 80%; 
+        font-size: 1em !important; 
+    }
+}
