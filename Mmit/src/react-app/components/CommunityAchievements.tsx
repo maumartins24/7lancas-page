@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import image from '@/images/saberes.jpg'
-
-const encruzilhadaSaberes = image
+import encruzilhadaSaberes from '@/images/saberes.jpg'
 
 interface Achievement {
   id: number;
-  image: string;
   title: string;
   purpose: string;
-  description: string;
+  description: string | React.ReactNode;
+  image: string;
+  icon?: React.ReactNode;
 }
 
 export default function CommunityAchievements() {
