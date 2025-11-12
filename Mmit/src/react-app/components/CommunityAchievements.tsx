@@ -38,6 +38,9 @@ export default function CommunityAchievements() {
 
     {
       id: 2,
+      image:
+        "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop&crop=center",
+ 
       title: "Youth Mentorship Program",
       purpose: "Education & Growth",
       description:
