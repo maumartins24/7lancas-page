@@ -12,7 +12,7 @@ Icon.Default.mergeOptions({
 
 export default function LocationFooter() {
   // Default coordinates (San Francisco) - replace with actual community location
-  const position: [number, number] = [-23.5539457, -46.5279647];
+  const position: [number, number] = [-23.5534377,, -46.5135777];
 
   return (
     <footer className="bg-gradient-to-t from-blue-900 to-blue-700 dark:from-red-900 dark:to-red-700 py-16 transition-all duration-500">
@@ -35,7 +35,7 @@ export default function LocationFooter() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>Carrão - ZL | Rua Francisca de Paula, 10</span>
+                <span>Av. Itaquera, 1102 - Parque Maria Luiza </span>
               </div>
               
               <div className="flex items-center justify-center lg:justify-start">
