@@ -12,7 +12,7 @@ Icon.Default.mergeOptions({
 
 export default function LocationFooter() {
   // Default coordinates (San Francisco) - replace with actual community location
-  const position: [number, number] = [-23.5534377,, -46.5135777];
+  const position: [number, number] = [-23.5534377, -46.5135777];
 
   return (
     <footer className="bg-gradient-to-t from-blue-900 to-blue-700 dark:from-red-900 dark:to-red-700 py-16 transition-all duration-500">
