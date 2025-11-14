@@ -2,19 +2,12 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
-// ✅ Configuração para build no Vercel
 export default defineConfig({
   plugins: [react()],
+  base: "./", // ✅ isso faz com que os assets usem caminhos relativos
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  server: {
-    port: 5173,
-  },
-  build: {
-    outDir: "dist",
-  },
-  base: "./",
 });
