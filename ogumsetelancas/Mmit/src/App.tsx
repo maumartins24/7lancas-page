@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import { ThemeProvider } from "@/react-app/contexts/ThemeContext";
-import HomePage from "@/react-app/pages/Home";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import HomePage from "./pages/Home";
 
 export default function App() {
   return (     
