@@ -1,4 +1,4 @@
-
+import Arrecadacao from '../components/ArrecadacaoArea';
 import Hero from '../components/Hero';
 import InstagramGrid from '../components/InstagramGrid';
 import CommunityAchievements from '../components/CommunityAchievements';
@@ -13,6 +13,7 @@ export default function Home() {
       <Header />
       <SubHeader />
       <Hero />
+      <Arrecadacao />
       <InstagramGrid />
       <CommunityAchievements />
       <LocationFooter />

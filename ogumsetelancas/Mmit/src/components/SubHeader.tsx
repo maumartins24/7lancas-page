@@ -1,10 +1,15 @@
+import { Link } from "react-router-dom";
+
 export default function SubHeader() {
   const menuItems = [
-    { name: "Sobre nós", href: "#sobre" },
-    { name: "Conquistas", href: "#conquistas" },
-    { name: "Localização", href: "#localizacao" },
-    { name: "Conheça nossa lojinha", href: "#lojinha" },
-    { name: "Rifas & Oportunidades", href: "#rifas" },
+    { name: "Sobre nós", href: "#sobre", type: "anchor" },
+    { name: "Conquistas", href: "#conquistas", type: "anchor" },
+    { name: "Localização", href: "#localizacao", type: "anchor" },
+    { name: "Conheça nossa lojinha", href: "#lojinha", type: "anchor" },
+    { name: "Rifas & Oportunidades", href: "#rifas", type: "anchor" },
+
+    // 🔥 novo item que é uma ROTA
+    { name: "Arrecadação", href: "/arrecadacao", type: "route" },
   ];
 
   return (
@@ -12,15 +17,25 @@ export default function SubHeader() {
       <ul className="flex flex-wrap justify-center gap-6 py-3 text-sm md:text-base font-medium">
         {menuItems.map((item) => (
           <li key={item.name}>
-            <a
-              href={item.href}
-              className="text-blue-800 dark:text-red-300 hover:text-blue-600 dark:hover:text-red-400 transition-colors duration-200"
-            >
-              {item.name}
-            </a>
+            {item.type === "route" ? (
+              <Link
+                to={item.href}
+                className="text-blue-800 dark:text-red-300 hover:text-blue-600 dark:hover:text-red-400 transition-colors duration-200"
+              >
+                {item.name}
+              </Link>
+            ) : (
+              <a
+                href={item.href}
+                className="text-blue-800 dark:text-red-300 hover:text-blue-600 dark:hover:text-red-400 transition-colors duration-200"
+              >
+                {item.name}
+              </a>
+            )}
           </li>
         ))}
       </ul>
     </nav>
   );
 }
+
