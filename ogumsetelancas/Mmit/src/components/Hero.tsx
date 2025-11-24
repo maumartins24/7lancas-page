@@ -20,7 +20,7 @@ export default function Hero() {
               dark:[-webkit-text-stroke:0.6px_theme(colors.red.900)]
             "
           >
-            Ogum 7 Lanças
+            
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-neutral-200 leading-relaxed">

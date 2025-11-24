@@ -11,7 +11,7 @@ export default function SubHeader() {
   ];
 
   return (
-    <nav className="sticky top-[56px] z-40 bg-white/60 dark:bg-neutral-950/70 backdrop-blur-lg border-b border-blue-200/30 dark:border-red-900/20 shadow-sm">
+    <nav className="sticky top-[70px] z-40 bg-white/60 dark:bg-neutral-950/70 backdrop-blur-lg border-b border-blue-200/30 dark:border-red-900/20 shadow-sm">
   <ul className="flex flex-wrap justify-center gap-9 md:gap-12 py-3 md:py-4 text-xs md:text-sm font-medium">
 
         {menuItems.map((item) => (

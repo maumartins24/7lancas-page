@@ -18,7 +18,7 @@ export default function CommunityAchievements() {
     {
       id: 1,
       image: encruzilhadaSaberes,
-      title: "Encruzilhada dos Saberes",
+      title: "Encruzilhada e Saberes",
       purpose: "Conhecimento para a comunidade!",
       description: (
         <>
