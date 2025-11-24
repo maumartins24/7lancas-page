@@ -38,7 +38,7 @@ export default function LocationFooter() {
 
           <p className="flex items-center gap-3">
             <FaPhone className="text-blue-700 dark:text-red-400" />
-            +55 (11) 99424-68919
+            +55 (11) 99424-6819
           </p>
 
           <p className="flex items-center gap-3">
