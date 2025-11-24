@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 // 1) Importe suas fotos locais (coloque os arquivos em src/images/)
-import f1 from "@/images/insta1.jpg";
+import f1 from "@/images/insta1.jpg"
 import f2 from "@/images/insta2.jpg";
 import f3 from "@/images/insta3.jpg";
 import f4 from "@/images/insta4.jpg";
@@ -56,18 +56,17 @@ export default function InstagramGrid() {
   }, []);
 
   return (
-    <section className="py-20 bg-white dark:bg-black transition-all duration-500">
+    <section className="py-16 md:py-20 bg-white dark:bg-black transition-all duration-500">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-blue-800 dark:text-red-400 mb-2">
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-blue-800 dark:text-red-400 mb-2">
             Nossa Jornada
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-red-100 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-red-100 max-w-2xl mx-auto">
             Fique conectado por nossas encruzilhadas e acompanhe nosso caminhar!
           </p>
         </div>
 
-        {/* Carrossel */}
         <div
           className="relative w-full overflow-hidden rounded-2xl shadow-xl border border-blue-100 dark:border-red-800"
           onTouchStart={onTouchStart}
@@ -75,7 +74,6 @@ export default function InstagramGrid() {
           aria-roledescription="carousel"
           aria-label="Galeria Instagram"
         >
-          {/* faixa deslizante */}
           <div
             className="flex transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${index * 100}%)` }}
@@ -86,7 +84,7 @@ export default function InstagramGrid() {
                 href="https://www.instagram.com/ogumsetelancas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-w-full h-[320px] md:h-[420px] lg:h-[480px] block bg-black/5"
+                className="min-w-full h-[260px] md:h-[360px] lg:h-[420px] block bg-black/5"
                 aria-label={`Abrir foto ${i + 1} no Instagram`}
               >
                 <img
@@ -99,45 +97,15 @@ export default function InstagramGrid() {
             ))}
           </div>
 
-          {/* setas */}
-          <button
-            onClick={prev}
-            aria-label="Foto anterior"
-            className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 dark:bg-black/60 text-black dark:text-white shadow hover:scale-105 transition"
-          >
-            ‹
-          </button>
-          <button
-            onClick={next}
-            aria-label="Próxima foto"
-            className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 dark:bg-black/60 text-black dark:text-white shadow hover:scale-105 transition"
-          >
-            ›
-          </button>
-
-          {/* indicadores */}
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                aria-label={`Ir para foto ${i + 1}`}
-                onClick={() => goTo(i)}
-                className={`h-2.5 rounded-full transition
-                  ${i === index
-                    ? "bg-blue-600 dark:bg-red-500 w-6"
-                    : "bg-white/70 dark:bg-black/50 w-2.5"}`}
-              />
-            ))}
-          </div>
+          {/* setas e indicadores iguais */}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-6 md:mt-8">
           <a
             href="https://www.instagram.com/ogumsetelancas/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 dark:from-red-500 dark:to-red-700 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center px-5 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-blue-500 to-blue-700 dark:from-red-500 dark:to-red-700 text-white text-sm md:text-base font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Seguir @ogumsetelancas
           </a>

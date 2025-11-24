@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section
@@ -9,14 +11,14 @@ export default function Hero() {
           <h1
             id="hero-title"
             className="
-    antialiased font-sans font-extrabold tracking-tight leading-tight
-    text-[clamp(2.5rem,8vw,4.5rem)]
-    text-blue-700
-    dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-red-400 dark:to-red-600
-    drop-shadow-[0_1px_0_rgba(255,255,255,.75)]
-    dark:drop-shadow-none
-    dark:[-webkit-text-stroke:0.6px_theme(colors.red.900)]
-  "
+              antialiased font-sans font-extrabold tracking-tight leading-tight
+              text-[clamp(2.5rem,8vw,4.5rem)]
+              text-blue-700
+              dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-red-400 dark:to-red-600
+              drop-shadow-[0_1px_0_rgba(255,255,255,.75)]
+              dark:drop-shadow-none
+              dark:[-webkit-text-stroke:0.6px_theme(colors.red.900)]
+            "
           >
             Ogum 7 Lanças
           </h1>
@@ -25,20 +27,20 @@ export default function Hero() {
             ⚔️ Templo Umbandista Sr. Ogum Sete Lanças e Pai João de Aruanda. ⚔️
           </p>
 
-          {/* CTAs opcionais */}
+          {/* CTAs */}
           <div className="mt-8 flex items-center justify-center gap-4">
-            <a
-              href="#sobre"
+            <Link
+              to="/sobre-nos"
               className="inline-flex items-center rounded-xl px-5 py-3 text-base font-medium bg-blue-600 text-white hover:bg-blue-700 dark:bg-red-600 dark:hover:bg-red-700 shadow-lg transition"
             >
               Conheça o Terreiro
-            </a>
-            <a
-              href="#contato"
+            </Link>
+            <Link
+              to="/rodrigo-bertozzi"
               className="inline-flex items-center rounded-xl px-5 py-3 text-base font-medium bg-white text-blue-700 border border-blue-200 hover:bg-blue-50 dark:bg-transparent dark:text-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800 transition"
             >
               Conheça nosso Sacerdote
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">

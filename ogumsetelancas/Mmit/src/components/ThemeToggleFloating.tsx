@@ -1,31 +1,25 @@
-import { useEffect, useState } from "react";
+// src/components/ThemeToggleFloating.tsx
+import { useTheme } from "../contexts/ThemeContext";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 export default function ThemeToggleFloating() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const dark = storedTheme === "dark" || (!storedTheme && prefersDark);
-    setIsDark(dark);
-    document.documentElement.classList.toggle("dark", dark);
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = isDark ? "light" : "dark";
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle("dark", !isDark);
-    localStorage.setItem("theme", newTheme);
-  };
+  const { isDarkMode, toggleTheme } = useTheme();
 
   return (
     <button
       onClick={toggleTheme}
-      className="fixed bottom-5 right-5 z-50 p-3 rounded-full bg-blue-600 dark:bg-red-600 text-white shadow-lg hover:scale-110 transition-transform duration-300"
+      className={`
+        fixed bottom-5 right-5 z-50 p-4 rounded-full shadow-xl transition-all duration-300
+        flex items-center justify-center
+        ${isDarkMode 
+          ? "bg-yellow-400 text-black hover:bg-yellow-300" 
+          : "bg-blue-600 text-white hover:bg-blue-700"
+        }
+        hover:scale-110 active:scale-95
+      `}
       aria-label="Alternar tema"
     >
-      {isDark ? <FaSun size={20} /> : <FaMoon size={20} />}
+      {isDarkMode ? <FaSun className="w-7 h-7" /> : <FaMoon className="w-7 h-7" />}
     </button>
   );
 }

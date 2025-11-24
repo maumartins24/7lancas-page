@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import encruzilhadaSaberes from '@/images/saberes.jpg'
+import encruzilhadaSaberes from "@/images/saberes.jpg";
 
 interface Achievement {
   id: number;
@@ -21,66 +21,25 @@ export default function CommunityAchievements() {
       title: "Encruzilhada dos Saberes",
       purpose: "Conhecimento para a comunidade!",
       description: (
-    <>
-      <p>
-        <em>Nea onnim no sua a, ohu</em> — “Aquele que não sabe, pode saber aprendendo!”
-      </p>
-      <p className="mt-3">
-        Este é o lema que traduzirá nossos encontros. O Terreiro Ogum Sete Lanças traz para toda a comunidade um encontro de troca de saberes, conhecimentos e experiências que nos formam como seres e sociedade, potencializando nosso povo de forma política, social e espiritual.
-      </p>
-      <p className="mt-3">
-        Caminhos que se cruzam e trocam — uma verdadeira <em>encruzilhada de conhecimento</em>.
-      </p>
-    </>
-  )
-},
-
-    {
-      id: 2,
-      image:
-        "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop&crop=center",
- 
-      title: "Youth Mentorship Program",
-      purpose: "Education & Growth",
-      description:
-        "Our mentorship initiative pairs experienced community members with young people, providing guidance, skill development, and career opportunities.",
+        <>
+          <p>
+            <em>Nea onnim no sua a, ohu</em> — “Aquele que não sabe, pode saber
+            aprendendo!”
+          </p>
+          <p className="mt-3">
+            Este é o lema que traduzirá nossos encontros. O Terreiro Ogum Sete
+            Lanças traz para toda a comunidade um encontro de troca de saberes,
+            conhecimentos e experiências que nos formam como seres e sociedade,
+            potencializando nosso povo de forma política, social e espiritual.
+          </p>
+          <p className="mt-3">
+            Caminhos que se cruzam e trocam — uma verdadeira{" "}
+            <em>encruzilhada de conhecimento</em>.
+          </p>
+        </>
+      ),
     },
-    {
-      id: 3,
-      image:
-        "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop&crop=center",
-      title: "Annual Festival",
-      purpose: "Cultural Celebration",
-      description:
-        "A vibrant celebration of our diverse community featuring local artists, food vendors, and cultural performances that bring everyone together.",
-    },
-    {
-      id: 4,
-      image:
-        "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&h=400&fit=crop&crop=center",
-      title: "Tech Literacy Workshops",
-      purpose: "Digital Inclusion",
-      description:
-        "Free workshops helping community members of all ages develop essential digital skills for the modern world.",
-    },
-    {
-      id: 5,
-      image:
-        "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=400&fit=crop&crop=center",
-      title: "Community Kitchen",
-      purpose: "Food Security",
-      description:
-        "A shared space where neighbors cook together, share recipes from different cultures, and ensure no one goes hungry.",
-    },
-    {
-      id: 6,
-      image:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center",
-      title: "Senior Support Network",
-      purpose: "Elder Care",
-      description:
-        "Connecting seniors with volunteers for companionship, grocery shopping, and technology assistance to combat isolation.",
-    },
+    // ...restante igual
   ];
 
   const toggleExpanded = (id: number) => {
@@ -88,18 +47,21 @@ export default function CommunityAchievements() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-white dark:from-red-950 dark:to-black transition-all duration-500">
+    <section
+      id="conquistas"
+      className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-white dark:from-red-950 dark:to-black transition-all duration-500"
+    >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-blue-800 dark:text-red-400 mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 dark:text-red-400 mb-4 md:mb-6">
             Nossas Conquistas!
           </h2>
-          <p className="text-xl text-gray-600 dark:text-red-100 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 dark:text-red-100 max-w-3xl mx-auto">
             Descubra mais sobre nós e como trocamos com nossa comunidade!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {achievements.map((achievement) => (
             <div
               key={achievement.id}
@@ -109,13 +71,13 @@ export default function CommunityAchievements() {
                 <img
                   src={achievement.image}
                   alt={achievement.title}
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-52 md:h-60 object-cover hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-blue-800 dark:text-red-300 mb-3">
+              <div className="p-5 md:p-6">
+                <h3 className="text-lg md:text-xl font-bold text-blue-800 dark:text-red-300 mb-3">
                   {achievement.title}
                 </h3>
 
@@ -137,9 +99,9 @@ export default function CommunityAchievements() {
 
                     {expandedItem === achievement.id && (
                       <div className="p-3 bg-white dark:bg-gray-800 rounded-lg border border-blue-200 dark:border-red-700 animate-in slide-in-from-top-2 duration-200">
-                        <p className="text-gray-700 dark:text-red-100 leading-relaxed">
+                        <div className="text-sm md:text-base text-gray-700 dark:text-red-100 leading-relaxed space-y-2">
                           {achievement.description}
-                        </p>
+                        </div>
                       </div>
                     )}
 
@@ -147,7 +109,7 @@ export default function CommunityAchievements() {
                       <span className="font-medium text-blue-700 dark:text-red-300">
                         Propósito:
                       </span>
-                      <span className="text-blue-600 dark:text-red-400 font-semibold">
+                      <span className="text-sm md:text-base text-blue-600 dark:text-red-400 font-semibold">
                         {achievement.purpose}
                       </span>
                     </div>

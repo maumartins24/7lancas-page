@@ -7,14 +7,13 @@ export default function SubHeader() {
     { name: "Localização", href: "#localizacao", type: "anchor" },
     { name: "Conheça nossa lojinha", href: "#lojinha", type: "anchor" },
     { name: "Rifas & Oportunidades", href: "#rifas", type: "anchor" },
-
-    // 🔥 novo item que é uma ROTA
     { name: "Arrecadação", href: "/arrecadacao", type: "route" },
   ];
 
   return (
-    <nav className="sticky top-20 z-40 bg-white/70 dark:bg-black/40 backdrop-blur-md border-b border-blue-100 dark:border-red-800 shadow-sm">
-      <ul className="flex flex-wrap justify-center gap-6 py-3 text-sm md:text-base font-medium">
+    <nav className="sticky top-[56px] z-40 bg-white/60 dark:bg-neutral-950/70 backdrop-blur-lg border-b border-blue-200/30 dark:border-red-900/20 shadow-sm">
+  <ul className="flex flex-wrap justify-center gap-9 md:gap-12 py-3 md:py-4 text-xs md:text-sm font-medium">
+
         {menuItems.map((item) => (
           <li key={item.name}>
             {item.type === "route" ? (
@@ -38,4 +37,3 @@ export default function SubHeader() {
     </nav>
   );
 }
-
